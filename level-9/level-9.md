@@ -16,7 +16,8 @@ The password for the next level is stored in the file data.txt in one of the few
    ```bash
    ls -alp
    ```
-as the file (data.txt) is in binary
+> as the file (data.txt) is in binary
+
 2. 📄 **Getting the password**
    ```bash
    strings data.txt | grep "=="
