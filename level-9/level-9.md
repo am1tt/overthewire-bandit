@@ -28,7 +28,7 @@ The password for the next level is stored in the file data.txt in one of the few
 
 ### 🔑 Password for Next Level
 ```
-4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
 ```
 
 ## 💡 Notes : 
