@@ -12,88 +12,88 @@ The password for the next level is stored in the file `data.txt`, which is a hex
 
 ### 🧭 Steps
 
-## make dir
+#### 📂 Make a temp directory
 `mkdir /tmp/am1t`
 
-## copy data.txt to created directory
+#### 📑 Copy data.txt to created directory
 `cp data.txt /tmp/am1t`
 
-## reverse hex dump using xxd
+#### 🔄 Reverse hex dump using xxd
 `xxd -r data.txt > data`
 
-## check the file type of data
+#### 🕵️ Check the file type of data
 `file data`  
-> you will get that its gzip compressed
+> you will get that it’s gzip compressed
 
-## change extension before using gzip to decompress
+#### 📝 Change extension before decompressing gzip
 `mv data file.gz`
 
-## decompress gzip
+#### 📦 Decompress gzip
 `gzip -d file.gz`
 
-## check the file type
+#### 🕵️ Check the file type
 `file file`  
-> now you will get that its bzip2 compressed
+> now you will get that it’s bzip2 compressed
 
-## change extension to bz2
+#### 📝 Change extension to bz2
 `mv file file.bz2`
 
-## decompress bz2
+#### 📦 Decompress bz2
 `bzip2 -d file.bz2`
 
-## check the file type
+#### 🕵️ Check the file type
 `file file`  
 > now you will see gzip again
 
-## change extension and decompress gzip
+#### 🔁 Change extension and decompress gzip
 `mv file file.gz`  
 `gzip -d file.gz`
 
-## check the file type
+#### 🕵️ Check the file type
 `file file`  
 > now you will get POSIX tar archive
 
-## change to .tar and extract
+#### 📦 Extract tar
 `mv file file.tar`  
 `tar xf file.tar`
 
-## check contents
+#### 📂 Check contents
 `ls`  
 > you will get `data5.bin` (tar again)
 
-## change extension and extract tar
+#### 🔁 Change extension and extract tar
 `mv data5.bin data.tar`  
 `tar xf data.tar`
 
-## check with file
+#### 🕵️ Check with file
 `file data6.bin`  
 > it’s bzip2 compressed
 
-## change extension and decompress bz2
+#### 📝 Change extension and decompress bz2
 `mv data6.bin data.bz2`  
 `bzip2 -d data.bz2`
 
-## check file type
+#### 🕵️ Check file type
 `file file`  
 > it’s tar archive again
 
-## extract tar
+#### 📦 Extract tar
 `mv file file.tar`  
 `tar xf file.tar`
 
-## check contents
+#### 📂 Check contents
 `ls`  
 > now you get `data8.bin` which is gzip
 
-## change extension and decompress gzip
+#### 📝 Change extension and decompress gzip
 `mv data8.bin data.gz`  
 `gzip -d data.gz`
 
-## check file type
+#### 🕵️ Final check
 `file data`  
 > now it is ASCII text
 
-## view the password
+#### 🔑 View the password
 `cat data`
 
 ---
